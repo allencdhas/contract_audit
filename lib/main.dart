@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SmartContact Audit App',
-      theme:
-          ThemeData(scaffoldBackgroundColor: Color.fromARGB(255, 61, 58, 156)),
+      theme: ThemeData(
+          scaffoldBackgroundColor: Color.fromARGB(255, 132, 128, 246)),
       home: Landing(),
     );
   }

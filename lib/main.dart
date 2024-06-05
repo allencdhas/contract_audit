@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -14,13 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SmartContact Audit App',
       theme: ThemeData(
-          scaffoldBackgroundColor: Color.fromARGB(255, 132, 128, 246)),
-      home: Landing(),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 132, 128, 246)),
+      home: const Landing(),
     );
   }
 }
 
 class Landing extends StatelessWidget {
+  const Landing({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,10 +39,10 @@ class Landing extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Auditor()),
+                  MaterialPageRoute(builder: (context) => const Auditor()),
                 );
               },
-              child: Text('Try Out'),
+              child: const Text('Try Out'),
             ),
           ],
         ),
